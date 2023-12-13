@@ -3,7 +3,7 @@ These are my config files. Soon I will add more
 
 Now I'm using Cinnamon config files
 
-![alt text](Cinnamon/pictures/desktop1.png "Cinnamon desktop")
+![alt text](preview/cinnamon_desktop.png "Cinnamon desktop")
 
 
 ## Installation
