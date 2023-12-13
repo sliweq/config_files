@@ -1,0 +1,22 @@
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+import requests
+import re
+
+url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=USER_NAME&api_key=YOUR_API_KEY&format=json"
+feed = requests.get(url);
+if not feed.status_code == requests.codes.ok:
+	print("Last.fm is quiet")
+	exit()
+json = feed.json()['recenttracks']['track'][0]
+output = '{}'.format(json['artist']['#text'].encode('utf-8'))
+output_title = '{}'.format(json['name'].encode('utf-8'))
+output = 'Artist: '+output[1:]
+output_title = 'Title: ' + output_title[1:]
+
+# make a line break every 38 characters
+
+print(re.sub('(.{38})', '\1 \n', output, 0, re.DOTALL))
+print(re.sub('(.{38})','\\1 \n', output_title, 0, re.DOTALL))
