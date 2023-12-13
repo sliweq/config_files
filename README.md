@@ -7,7 +7,7 @@ Now I'm using Cinnamon config files
 
 
 ## Installation
-Copy the repository. From Cinnamon/i3 copy everything except pictures dir
+Copy the repository. From Cinnamon/i3 copy everything you want
 ```bash
 https://github.com/sliweq/config_files.git
 ```
